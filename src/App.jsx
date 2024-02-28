@@ -13,7 +13,7 @@ const AppContent = () => {
   const { popz } = usePopz();
 
   const handleSubmit = () => {
-    popz('dark','default','', 'false');
+    popz('dark','success','', 'true');
   };
 
   return (

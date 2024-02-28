@@ -11,10 +11,10 @@ export const PopzProvider = ({children}) => {
 
   const popz = {
     popz: (theme, type, message, progressBar) => {
-      setPopzTheme(theme);
-      setPopzType(type);
-      setPopzMessage(message);
-      setPopzProgressBar(progressBar);
+      setPopzTheme(theme.toLowerCase());
+      setPopzType(type.toLowerCase());
+      setPopzMessage(message.toLowerCase());
+      setPopzProgressBar(progressBar.toLowerCase());
 
       setTimeout(() => {
         setPopzTheme(null),
