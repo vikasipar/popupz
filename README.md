@@ -1,4 +1,4 @@
-### React-Popupz
+### 🍿 React-Popupz
 
 React-Popupz is a simple and customizable popup notification library for React applications. It provides an easy way to display success, error, warning, info, or default messages to users with customizable themes and message content.
 
@@ -12,24 +12,25 @@ npm install react-popupz
 
 #### Usage
 
-1. **Integration in App.jsx**
+1. **Integration in main.jsx**
 
-   Wrap your application component with the `PopzProvider` to enable the popup notifications. Your `App.jsx` should be structured as follows:
+   Wrap your application component with the `PopzProvider` to enable the popup notifications. Your `main.jsx` should be structured as follows:
 
    ```jsx
    import React from 'react';
+   import ReactDOM from 'react-dom/client';
+   import App from './App.jsx';
    import { PopzProvider } from 'react-popupz';
-   import AppContent from './AppContent'; // Import your main application component
+   import './index.css';
 
-   const App = () => {
-     return (
-       <PopzProvider>
-         <AppContent />
-       </PopzProvider>
-     );
-   };
+   ReactDOM.createRoot(document.getElementById('root')).render(
+     <React.StrictMode>
+        <PopzProvider>
+          <App />
+         <PopzProvider />
+     </React.StrictMode>,
+   )
 
-   export default App;
    ```
 
 2. **Displaying Popup Notifications**
@@ -47,7 +48,7 @@ npm install react-popupz
    import React from 'react';
    import { usePopz } from 'react-popupz';
 
-   const AppContent = () => {
+   const App = () => {
      const { popz } = usePopz();
 
      const handleSubmit = () => {
@@ -69,7 +70,7 @@ npm install react-popupz
      );
    };
 
-   export default AppContent;
+   export default App;
    ```
 
    In this example, clicking the submit button triggers the display of a success popup notification with a dark theme, displaying the message "Logged in Successfully!" and including a progress bar.
