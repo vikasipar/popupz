@@ -2,7 +2,7 @@
   "name": "react-popupz",
   "version": "1.0.0",
   "description": "A simple and customizable popup notification/modal library for React applications.",
-  "main": "index.js",
+  "main": "index.jsx",
   "type": "module",
   "scripts": {
     "dev": "vite",
