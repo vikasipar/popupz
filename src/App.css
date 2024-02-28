@@ -1,0 +1,11 @@
+@keyframes l1 {
+  100% {background-size:100%}
+}
+
+.popz {
+animation: l2 1.2s;
+}
+@keyframes l2{
+0% {transform: translateX(250px);}
+100% {transform: translateX(0);}
+}
