@@ -1,5 +1,5 @@
 import React from 'react';
-import { PopzProvider, usePopz } from './react-popupz';
+import { PopzProvider, usePopz } from './index';
 
 const App = () => {
   return (
