@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 
 function ProgressBar({color, bgcolor}) {
     
@@ -12,7 +12,7 @@ function ProgressBar({color, bgcolor}) {
   }
   return (
     <div>
-        <div className='loader mt-3 rounded-3xl' style={progressBarStyle}></div>
+        <div className='loader progressBar' style={progressBarStyle}></div>
     </div>
   )
 }

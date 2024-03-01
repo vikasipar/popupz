@@ -1,9 +1,8 @@
 {
   "name": "popupz",
-  "version": "2.0.0",
+  "version": "2.2.4",
   "description": "A simple and customizable popup notification/modal library for React applications.",
-  "main": "index.js",
-  "type": "module",
+  "main": "src/index.jsx",
   "scripts": {
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"

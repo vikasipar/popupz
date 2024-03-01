@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import Popz from './Popz';
+import './index.css';
 
 const PopzContext = createContext();
 
@@ -12,7 +13,7 @@ export const PopzProvider = ({ children }) => {
 
       const newId = id + 1;
       setId(newId);
-      const newPop = { id: newId, theme: theme.toLowerCase(), type: type.toLowerCase(), message: message.toLowerCase(), progressBar: progressBar.toLowerCase() };
+      const newPop = { id: newId, theme: theme.toLowerCase(), type: type.toLowerCase(), message: message, progressBar: progressBar.toLowerCase() };
       setPopzQueue(prevQueue => [...prevQueue, newPop]);
       setTimeout(() => {
         setPopzQueue(prevQueue => prevQueue.filter(pop => pop.id !== newPop.id));
@@ -24,9 +25,9 @@ export const PopzProvider = ({ children }) => {
     <PopzContext.Provider value={popz}>
       {children}
       {popzQueue.length > 0 && (
-        <div className='fixed top-[20px] right-[20px] min-w-52'>
+        <div className='container'>
           {popzQueue.map((pop) => (
-            <div key={pop.id} className='my-1'>
+            <div key={pop.id} className='popzSpace'>
               <Popz theme={pop.theme} type={pop.type} message={pop.message} progressBar={pop.progressBar} />
             </div>
           ))}

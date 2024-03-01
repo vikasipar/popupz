@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes l1 {
+    100% {background-size:100%}
+  }
+
+  .popz {
+    animation: l2 1.2s;
+    border-radius: 10px;
+    z-index: 99999;
+    box-shadow: 3px 3px 5px #8a8989;
+  }
+  @keyframes l2{
+    0% {transform: translateX(250px);}
+    100% {transform: translateX(0);}
+  }
+
+  .container{
+    position: fixed;
+    top: 20px;
+    right:20px;
+    min-width: 13rem;
+  }
+
+  .withProgressBar{
+    padding: 7px 4px 0.2px 4px;
+  }
+
+  .withoutProgressBar{
+    padding: 9px 8px;
+  }
+
+  .contentWraper{
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: baseline;
+    font-size: 16px;
+    column-gap: 6px;
+  }
+  .popzSpace{
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .icon{
+    font-size: 19px;
+  }
+
+  .lightMode{
+    color: rgb(32, 32, 32);
+    background-color: rgb(255 255 255 / 0.8);
+  }
+
+  .darkMode{
+    color: rgb(245, 245, 245);
+    background-color: rgba(27, 27, 27, 0.8);
+  }
+
+  .progressBar{
+    margin-top: 12px;
+    border-radius: 24px;
+  }
