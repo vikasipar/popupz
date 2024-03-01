@@ -1,14 +1,12 @@
 {
-  "name": "react-popupz",
-  "version": "1.0.0",
+  "name": "popupz",
+  "version": "2.0.0",
   "description": "A simple and customizable popup notification/modal library for React applications.",
-  "main": "index.jsx",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "keywords": [
     "react",
@@ -20,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/vikasipar/react-popupz.git"
   },
-  "homepage": "https://github.com/your-username/react-popupz",
+  "homepage": "https://github.com/vikasipar/react-popupz",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
