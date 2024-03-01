@@ -3,7 +3,7 @@ import { PopzProvider, usePopz } from './index';
 
 const App = () => {
   return (
-    <PopzProvider>
+    <PopzProvider position='tl'>
       <AppContent />
     </PopzProvider>
   );
@@ -24,10 +24,14 @@ const AppContent = () => {
   const handleSubmit4 = () => {
     popz('dark','info','', 'true');
   };
+  const handleSubmit5 = () => {
+    popz('dark','default','', 'false');
+  };
 
   return (
-    <div className='App flex flex-col justify-around w-[9%] mx-3'>
+    <div className='App flex flex-col justify-around w-[90px] mx-3'>
       <h1>My Test App</h1>
+      <button className='p-2 bg-blue-700 text-white font-semibold rounded-lg my-5' onClick={handleSubmit5}>default</button>
       <button className='p-2 bg-blue-700 text-white font-semibold rounded-lg my-5' onClick={handleSubmit1}>success</button>
       <button className='p-2 bg-blue-700 text-white font-semibold rounded-lg my-5' onClick={handleSubmit2}>error</button>
       <button className='p-2 bg-blue-700 text-white font-semibold rounded-lg my-5' onClick={handleSubmit3}>warning</button>

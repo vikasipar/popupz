@@ -6,8 +6,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 import { RiErrorWarningFill } from "react-icons/ri";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 
-const Popz = ({theme, type, message, progressBar}) => {
-
+const Popz = ({theme, type, message, progressBar, direction}) => {
+  const dir = direction;
   const [color, setColor] = useState('');
   const [bgcolor, setBgcolor] = useState('');
   const [icon, setIcon] = useState(null);
@@ -57,7 +57,7 @@ const Popz = ({theme, type, message, progressBar}) => {
   }, []);
 
   return (
-    <div className={`popz ${theme==='light'? 'lightMode': 'darkMode'} ${progressBar==='true' ? 'withProgressBar':'withoutProgressBar'}`}>
+    <div className={`popz ${(dir==='tr' || dir==='br')?'popz-right':'popz-left'} ${theme==='light'? 'lightMode': 'darkMode'} ${progressBar==='true' ? 'withProgressBar':'withoutProgressBar'}`}>
         <div className='contentWraper'>
           <span className='icon' style={{color: `${color}`}}>
             {icon}

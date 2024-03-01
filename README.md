@@ -33,7 +33,17 @@ npm install popupz
 
    ```
 
-2. **Displaying Popup Notifications**
+2. **Custom Pop-Up Positioning**
+
+    Pop-up positioning is crucial for a seamless user experience. You can choose from options like top-left (tl), top-right (tr), bottom-left (bl), and bottom-right (br) to strategically place notifications. Adding a position prop to the PopzProvider component allows users to customize pop-up placement. If no position is specified, pop-ups default to the top-right corner for consistency.
+
+    ```jsx
+      <PopzProvider position='tl'>
+        <App />
+      </PopzProvider>
+    ```
+
+3. **Displaying Popup Notifications**
 
    To display popup notifications, first import the **usePopz** hook in your component.
 
@@ -56,7 +66,7 @@ npm install popupz
 
    ```jsx
    import React from 'react';
-   import { usePopz } from 'popupz/dist';
+   import { usePopz } from 'popupz';
 
    const MyComponent = () => {
      const { popz } = usePopz();

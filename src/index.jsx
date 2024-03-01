@@ -1,16 +1,21 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import Popz from './Popz';
 import './index.css';
 
 const PopzContext = createContext();
 
-export const PopzProvider = ({ children }) => {
+export const PopzProvider = ({ children, position }) => {
   const [popzQueue, setPopzQueue] = useState([]);
   const [id, setId] = useState(0);
+  const [dir, setDir] = useState('tr');
+
+  useEffect(() => {
+    const directions = ['tl', 'tr', 'bl', 'br'];
+    setDir(directions.includes(position)?position:'tr');
+  }, [position])
 
   const popz = {
     popz: (theme, type, message, progressBar) => {
-
       const newId = id + 1;
       setId(newId);
       const newPop = { id: newId, theme: theme.toLowerCase(), type: type.toLowerCase(), message: message, progressBar: progressBar.toLowerCase() };
@@ -25,10 +30,10 @@ export const PopzProvider = ({ children }) => {
     <PopzContext.Provider value={popz}>
       {children}
       {popzQueue.length > 0 && (
-        <div className='container'>
+        <div className={`container ${dir}`}>
           {popzQueue.map((pop) => (
             <div key={pop.id} className='popzSpace'>
-              <Popz theme={pop.theme} type={pop.type} message={pop.message} progressBar={pop.progressBar} />
+              <Popz theme={pop.theme} type={pop.type} message={pop.message} progressBar={pop.progressBar} direction={dir}/>
             </div>
           ))}
         </div>
