@@ -1,6 +1,6 @@
 {
   "name": "popupz",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "A simple and customizable popup notification library for React applications.",
   "main": "src/index.jsx",
   "scripts": {

@@ -9,7 +9,6 @@
   .popz {
     border-radius: 10px;
     z-index: 99999;
-    box-shadow: 1px 1px 2px 2px #d6d5d5;
   }
 
   .popz-left{
@@ -55,7 +54,7 @@
   }
 
   .withoutProgressBar{
-    padding: 5px 6px;
+    padding: 6px 6px;
   }
 
   .contentWraper{
