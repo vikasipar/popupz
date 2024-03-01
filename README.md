@@ -38,7 +38,7 @@ npm install popupz
    To display popup notifications, first import the **usePopz** hook in your component.
 
    ```jsx
-     import { usePopz } from 'popupz/dist';
+     import { usePopz } from 'popupz';
    ```
 
    Now use the `popz` function provided by the `usePopz` hook. The function accepts four parameters: `theme`, `type`, `message`, and `progressBar`.
