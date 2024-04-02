@@ -19,7 +19,7 @@ const AppContent = () => {
     popz('light','error','', 'true');
   };
   const handleSubmit3 = () => {
-    popz('dark','warning','', 'true');
+    popz('dark','warning','Notice all the errors you see in the console. This tells you there are type errors in your codebase Also notice that no index.js is created anymore', 'true');
   };
   const handleSubmit4 = () => {
     popz('dark','info','', 'true');

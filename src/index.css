@@ -29,7 +29,13 @@
 
   .container{
     position: fixed;
-    width: 14rem;
+    width: 40%;
+  }
+
+  @media screen and (max-width: 680px) {
+    .container{
+      width: 70%;
+    }
   }
 
   .tl{
@@ -69,6 +75,8 @@
   .popzSpace{
     margin-top: 4px;
     margin-bottom: 4px;
+    max-width: max-content;
+    min-width: 14rem;
   }
 
   .icon{
