@@ -62,7 +62,7 @@ const Popz = ({theme, type, message, progressBar, direction}) => {
           <span className='icon' style={{color: `${color}`}}>
             {icon}
           </span> 
-          <span>{message}</span>
+          <span className='message'>{message}</span>
         </div>
         {(progressBar === 'true') && <ProgressBar color={color} bgcolor={bgcolor}/>}
     </div>

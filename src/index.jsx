@@ -32,7 +32,7 @@ export const PopzProvider = ({ children, position }) => {
       {popzQueue.length > 0 && (
         <div className={`container ${dir}`}>
           {popzQueue.map((pop) => (
-            <div key={pop.id} className='popzSpace'>
+            <div key={pop.id} className='popzSpace' style={{ float: (dir === 'tl' || dir === 'bl') ? 'left' : 'right' }}>
               <Popz theme={pop.theme} type={pop.type} message={pop.message} progressBar={pop.progressBar} direction={dir}/>
             </div>
           ))}
