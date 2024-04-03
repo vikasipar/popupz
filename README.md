@@ -1,6 +1,6 @@
 ## Popupz 🍿
 
-Popupz is a simple and customizable popup notification library for React applications. It provides an easy way to display success, error, warning, info, or default messages to users with customizable themes and message content.
+[Popupz](https://popupz.vercel.app/) is a simple and customizable popup notification library for React applications. It provides an easy way to display success, error, warning, info, or default messages to users with customizable themes and message content.
 
 #### Installation
 
@@ -90,4 +90,11 @@ npm install popupz
    ```
 
    In this example, clicking the submit button triggers the display of a success popup notification with a dark theme, displaying the message "Logged in Successfully!" and including a progress bar.
+
+#### Contribute
+ Your support ❤️ means a lot! Give us a ⭐️ on GitHub. Any suggestions are welcome!
+
+   #### Contributors
+
+   [Vikas Ipar](https://vikasipar.me/)
 
