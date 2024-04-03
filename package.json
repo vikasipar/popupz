@@ -1,6 +1,6 @@
 {
   "name": "popupz",
-  "version": "3.2.3",
+  "version": "3.2.5",
   "description": "A simple and customizable popup notification library for React applications.",
   "main": "src/index.jsx",
   "scripts": {
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "https://github.com/vikasipar/popupz.git"
   },
-  "homepage": "https://github.com/vikasipar/popupz",
+  "homepage": "https://popupz.vercel.app",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
